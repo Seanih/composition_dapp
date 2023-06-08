@@ -31,14 +31,12 @@ contract MyContract {
 
         require(bytes(userName).length > 0 && age > 17, "User doesn't exist");
 
-        string memory phrase = string(
-            string.concat(
-                "Their name is ",
-                userName,
-                " and they're ",
-                Strings.toString(age),
-                " years old"
-            )
+        string memory phrase = string.concat(
+            "Their name is ",
+            userName,
+            " and they're ",
+            Strings.toString(age),
+            " years old"
         );
 
         return phrase;
